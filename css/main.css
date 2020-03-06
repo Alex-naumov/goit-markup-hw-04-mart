@@ -14,15 +14,34 @@ button{
     margin-top: 40px;
     margin-bottom: 100px;
 }
-.header_inner{
+.navbar_inner{
     display: flex;
     justify-content: space-between;
     
 }
-.nav{
-    width: 470px;
+.logo{
+    margin: 0;
+    font-weight: 300;
+    margin-right: auto;
+}
+.logo a {
+    display: block;
+    color: #515151;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .logo::first-letter {
+    color: #1abc9c;
+    font-weight: 900;
+  }
+  .nav{ 
     display: flex;
     justify-content: space-between;
+    list-style: none;
+    align-items: center;
 }
 .nav_link{
     color: #0f0101;
@@ -30,6 +49,8 @@ button{
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 14px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .nav_link:hover{
     color: #1abc9c;
@@ -44,6 +65,7 @@ h2{
 .title{
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .container{
@@ -52,45 +74,99 @@ h2{
 }
 
 
+.products{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 .products_list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    }
 .card{
-    width: 255px;
-    
-    display: inline-block;
-    padding-bottom: 30px;
+    flex-basis: 255px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
 
 }
-.card_inner{
-    background-color: #323232;
-    color: #fff;
-    padding-left: 14px;
-    height: 40px;
+.card-hover{
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 18px;
-    text-transform: uppercase;
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 52px;
+    transform: translateX(10px);
+    width: 234px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.53);
+    opacity: 0;
+}
+.card-hover:hover,
+.card-hover:focus {
+  opacity: 1;
+}
+.card-link{
+    display: flex;
+  text-decoration: none;
+  width: 255px;
 }
 
 
 .card_inner-price{
-    background-color:rgba(255, 255, 255, 0.4);
-    height: 40px;
-    padding: 0 14px;
-    align-items: center;
-    display: flex;
+    text-align: center;
+  display: inline-block;
+  width: 55px;
+  background-color: #8c8c8c;
+}
+.card_inner-name{
+    display: block;
+  padding-left: 12px;
+  background-color: #323232;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 200px;
+  height: 18px;
+}
+.card_inner-name,
+.card_inner-price{
+  padding-top: 12px;
+  height: 40px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
 }
 
- .card_inner:hover {
+
+
+.card:hover .card_inner-name {
     background-color: #1abc9c;
-    cursor: pointer;
-}
+  }
+  .card:hover .card_inner-price {
+    background-color: #7fd9c7;
+  }
+  
+  .card-link:focus .card_inner-name {
+    background-color: #1abc9c;
+  }
+  .card-link:focus .card_inner-price {
+    background-color: #7fd9c7;
+  }
 .news{
     margin-top: 100px;
 }
@@ -99,6 +175,7 @@ h2{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 115px;
+    list-style: none;
 }
 
 .news_article{
@@ -110,16 +187,30 @@ h2{
     font-weight: 600;
     font-size: 18px ;
     color: #555252;
+    margin-bottom: 30px;
 }
+
+.news_article-title::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 14px;
+    background-image: url(../images/underline4.png);
+    background-repeat: no-repeat;
+   margin-top: 15px;
+    
+  }
 
 .news_article-text{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #555252;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
-.news_btn{
+.news_link{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 16px ;
